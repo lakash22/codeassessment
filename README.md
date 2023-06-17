@@ -1,6 +1,5 @@
 # User Registration and Login Application
-This application performs CRUD operations using Restful apis to store and retrive user information in Dynamo DB table.
-It also contains integration tests whoch tests the rest apis against the dynamoDB using spring-data-dynamodb
+This application utilizes RESTful API to perform create and read operations, enabling the storage and retrieval of user information in a DynamoDB table. Additionally, it incorporates integration tests that validate the functionality of the REST APIs against DynamoDB, leveraging the capabilities of the Spring Data DynamoDB framework.
 
 ## Getting Started
 
@@ -12,7 +11,7 @@ It also contains integration tests whoch tests the rest apis against the dynamoD
 ```
 java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb -inMemory
 
-C:\Users\alakhotiya\OneDrive - Desktop\MyProjects\dynamodb_local_latest>java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb -inMemory
+C:\Users\alakhotiya\ - MyProjects\dynamodb_local_latest>java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb -inMemory
 Initializing DynamoDB Local with the following configuration:
 Port:   8000
 InMemory:       true
@@ -22,28 +21,28 @@ shouldDelayTransientStatuses:   false
 CorsParams:     null
 ```
 
-### Setup NoSQL workbench for DynanoDB
+### Setup NoSQL workbench for DynamoDB
 
 Install NoSQL workbench from below link
 https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/workbench.html
 
-`*` After Installation is done, Open NoSQL Workbench
+`*` After Installation is done, Open NoSQL Workbench.
 
-`*` Create new data model - UserDataModel. Provide name and Description and Click on create
+`*` Create new data model - UserDataModel. Provide name and Description and Click on create.
 
-`*` Click on 'Data Modeler' and then click on '+' to add tables
+`*` Click on 'Data Modeler' and then click on '+' to add tables.
 
-`*` Enter the Table Name - User and Primary Key - Id and Other Attributes - firstName, lastName, email, password
+`*` Enter the Table Name - User and Primary Key - Id and Other Attributes - firstName, lastName, email, password.
 
-`*` Go to the 'Visualizer' and Click on 'Commit to Amazon DynamoDB' 
+`*` Go to the 'Visualizer' and Click on 'Commit to Amazon DynamoDB'. 
 
 `*` Select the 'default' under 'Use saved connection' and Click Commit.
 
 ### Running application locally
 
-Open the code assessment application in intellij IDE
-Run maven clean install
-Now run the application locally - by default application will run on port 8080
+Open the code assessment application in IntelliJ IDE.
+Run man clean install command.
+Now run the application locally - by default application will run on port 8080.
 Use the below end points in postman to register and login user.
 
 ## Rest API Details 
@@ -70,7 +69,7 @@ If users email exists, don't store in DB and give error
 
 ![Alt text](screenshots/UserAlreadyExists.PNG)
 
-#### dynamoDB 
+#### DynamoDB 
 Newly created user saved to database 
 
 ![Alt_text](screenshots/UserRecordInDynamoDB.PNG)
@@ -87,7 +86,7 @@ Sample Payload - {
                  }
 
 ```
-#### postman 
+#### Postman 
 Valid login details - Executing post call using Postman to get token for requested user
 
 ![Alt text](screenshots/LoginUserTokenReturned.PNG)
@@ -105,7 +104,7 @@ End point - http://localhost:8080/codeassessment/users/login
 Http method - GET
 Http headers - token:{{tokenValue}}
 ```
-#### postman 
+#### Postman 
 Valid token - User gets the details
 
 ![Alt text](screenshots/GetUserDetails.PNG)
@@ -116,7 +115,7 @@ Invalid token - User gets unauthorized error
 
 ## Automation Scripts
 
-Please find the the integration testcases below for the testing restful apis functionality 
+Please find the integration test-cases below for testing RESTful api functionality 
 
 ### Test Cases For User Registration
 
@@ -125,8 +124,8 @@ Sno. | Test Case  | Status Code | Response |
 1 | User with valid email, password, firstname, lastname should be able to register and record should be added to User table in dynamoDB | 201 | User successfully created |
 2 | Already registered user should get error while registration | 400 | User already exists. Please login |
 3 | Missing Email address during registration | 400 | Provide valid email address |
-4 | Missing password address during registration | 400 | Provide valid password between 8-20 characters |
-5 | Invalid Email that doesnt have @ and domain should give error | 400 |  Provide valid email address |
+4 | Missing password during registration | 400 | Provide valid password between 8-20 characters |
+5 | Invalid Email that doesn't have @ and domain should give error | 400 |  Provide valid email address |
 6 | Invalid password less than 8 characters | 400 |  Provide valid password between 8-20 characters |
 7 | Invalid password more than 20 characters | 400 |  Provide valid password between 8-20 characters |
 
@@ -144,7 +143,7 @@ Sno. | Test Case  | Status Code | Response |
 
 Sno. | Test Case  | Status Code | Response | 
 --- | --- | --- | --- |
-1 | User with valid token that is generated after login should be able to retrieve their information | 200 | json response with firstname , lastname and email address verified against db |                                                                                      
+1 | User with valid token that is generated after login should be able to retrieve their information | 200 | json response with firstname, lastname and email address verified against db |                                                                                      
 2 | User with invalid token should not be able to access their information | 401 | Unauthorized |
 
 ### Test case Run
@@ -155,12 +154,14 @@ Below is the screenshot of test case run in local.
 
 Note - 
 
-`*` Ignored 3 tests of password and email validations as my code doesnt handle those scenarios and bad data would enter the database
+`*` Ignored 3 tests of password and email validations as my code doesn't handle those scenarios and bad data could be inserted into the database
  
-`*` More test cases can be added to test SQl and JS injection when entering data in DB
+`*` More test cases can be added to test SQL and JS injection before inserting data in DB
 
 ## Assumptions
 
-`*` In the code, I have assumed that id that is getting generated in the table is the token for that user. Token should be generated gracefully using JSON Web tokens, OAuth tokens and they should have expiration period as well 
+`*` In the code, I've made an assumption that the generated ID in the table serves as the token for the user. However, it would be more appropriate to generate tokens using secure methods such as JSON Web tokens or OAuth tokens, which also include an expiration period.
 
-`*` I have directly stored the password in database which is not a good practice. Passwords should be encrypted before storing it.
+`*` As for storing passwords in the database, I have directly stored them without encryption. It is important to note that this is not considered a best practice. Instead, passwords should be encrypted before being stored to enhance security and protect user information.
+
+`*` The application and database are not currently deployed or hosted in a cloud environment. Instead, the application is running locally using the built-in Tomcat server provided by Spring Boot.
