@@ -152,7 +152,7 @@ Below is the screenshot of test case run in local.
 
 ![Alt text](screenshots/TestRunDetails.PNG)
 
-Note - 
+### Notes 
 
 `*` I have ignored three tests for password and email validations since my code currently does not handle those scenarios, which could allow bad data to be inserted into the database. Additional test cases can be implemented to sanitize all user inputs, including fields such as first name and last name.
  
