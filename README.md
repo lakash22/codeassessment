@@ -11,7 +11,7 @@ This application utilizes RESTful API to perform create and read operations, ena
 ```
 java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb -inMemory
 
-C:\Users\alakhotiya\ - MyProjects\dynamodb_local_latest>java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb -inMemory
+C:\Users\alakhotiya\MyProjects\dynamodb_local_latest>java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb -inMemory
 Initializing DynamoDB Local with the following configuration:
 Port:   8000
 InMemory:       true
