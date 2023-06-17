@@ -148,7 +148,7 @@ Sno. | Test Case  | Status Code | Response |
 
 ### Test case Run
 
-Below is the screenshot of test case run in local. 
+Below is the screenshot of integration tests run in local. 
 
 ![Alt text](screenshots/TestRunDetails.PNG)
 
@@ -169,4 +169,4 @@ Below is the screenshot of test case run in local.
 
 `*` The application and database are not currently deployed or hosted in a cloud environment. Instead, the application is running locally using the built-in Tomcat server provided by Spring Boot.
 
-`*` I have not developed a user interface that facilitates calling the RESTful API for user registration and login purposes.
+`*` I have not developed a user interface that facilitates calling the RESTful API for user registration and login purposes. Also, unit tests should be added to adhere to testing pyramid.
