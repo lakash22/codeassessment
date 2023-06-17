@@ -154,9 +154,12 @@ Below is the screenshot of test case run in local.
 
 Note - 
 
-`*` Ignored 3 tests of password and email validations as my code doesn't handle those scenarios and bad data could be inserted into the database.
+`*` I have ignored three tests for password and email validations since my code currently does not handle those scenarios, which could allow bad data to be inserted into the database. Additional test cases can be implemented to sanitize all user inputs, including fields such as first name and last name.
  
-`*` More test cases can be added to test SQL and JS injection before inserting data in DB.
+`*` To enhance security, a mechanism should be implemented that temporarily blocks a user from obtaining a token after a certain number of consecutive invalid password or email attempts. This prevents potential brute force attacks and unauthorized access.
+
+`*` Test cases should be implemented to validate the security measures against SQL and JavaScript injection vulnerabilities. These types of attacks can exploit weaknesses in your application's handling of user inputs.
+
 
 ## Assumptions
 
@@ -165,3 +168,5 @@ Note -
 `*` As for storing passwords in the database, I have directly stored them without encryption. It is important to note that this is not considered a best practice. Instead, passwords should be encrypted before being stored to enhance security and protect user information.
 
 `*` The application and database are not currently deployed or hosted in a cloud environment. Instead, the application is running locally using the built-in Tomcat server provided by Spring Boot.
+
+`*` I have not developed a user interface that facilitates calling the RESTful API for user registration and login purposes.
