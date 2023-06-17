@@ -60,8 +60,8 @@ Sample Payload - {
                  }
 
 ```
-#### postman 
-Executing post call using Postman to register new user
+#### Postman 
+Executing post call using Postman to register new user.
 
 ![Alt_text](screenshots/UserSuccessfulRegistration.PNG)
 
@@ -70,13 +70,13 @@ If users email exists, don't store in DB and give error
 ![Alt text](screenshots/UserAlreadyExists.PNG)
 
 #### DynamoDB 
-Newly created user saved to database 
+Newly created user saved to database. 
 
 ![Alt_text](screenshots/UserRecordInDynamoDB.PNG)
 
 
 ### Login User
-This endpoint authenticates user and returns a token
+This endpoint authenticates user and returns a token.
 ```
 End point - http://localhost:8080/codeassessment/users/login
 Http method - POST
@@ -87,7 +87,7 @@ Sample Payload - {
 
 ```
 #### Postman 
-Valid login details - Executing post call using Postman to get token for requested user
+Valid login details - Executing post call using Postman to get token for requested user.
 
 ![Alt text](screenshots/LoginUserTokenReturned.PNG)
 
@@ -115,7 +115,7 @@ Invalid token - User gets unauthorized error
 
 ## Automation Scripts
 
-Please find the integration test-cases below for testing RESTful api functionality 
+Please find the integration test-cases below for testing RESTful api functionality. 
 
 ### Test Cases For User Registration
 
@@ -154,9 +154,9 @@ Below is the screenshot of test case run in local.
 
 Note - 
 
-`*` Ignored 3 tests of password and email validations as my code doesn't handle those scenarios and bad data could be inserted into the database
+`*` Ignored 3 tests of password and email validations as my code doesn't handle those scenarios and bad data could be inserted into the database.
  
-`*` More test cases can be added to test SQL and JS injection before inserting data in DB
+`*` More test cases can be added to test SQL and JS injection before inserting data in DB.
 
 ## Assumptions
 
