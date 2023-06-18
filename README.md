@@ -41,7 +41,7 @@ https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/workbench.html
 ### Running application locally
 
 Open the code assessment application in IntelliJ IDE.
-Run man clean install command.
+Run mvn clean install command.
 Now run the application locally - by default application will run on port 8080.
 Use the below end points in postman to register and login user.
 
@@ -158,8 +158,7 @@ Below is the screenshot of integration tests run in local.
  
 `*` To enhance security, a mechanism should be implemented that temporarily blocks a user from obtaining a token after a certain number of consecutive invalid password or email attempts. This prevents potential brute force attacks and unauthorized access.
 
-`*` Test cases should be implemented to validate the security measures against SQL and JavaScript injection vulnerabilities. These types of attacks can exploit weaknesses in your application's handling of user inputs.
-
+`*` Test cases should be implemented to validate the users input against SQL and JavaScript injection vulnerabilities.
 
 ## Assumptions
 
