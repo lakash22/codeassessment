@@ -153,6 +153,8 @@ Sno. | Test Case  | Status Code | Response |
 
 ### Test case Run
 
+Integration tests can be found here - https://github.com/lakash22/codeassessment/tree/main/src/test/java/com/example/codeassessment/integration
+
 To run the integration tests, please start the application using below command and run test
 
 ```
