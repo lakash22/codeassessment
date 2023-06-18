@@ -47,16 +47,6 @@ public class UserService {
   }
 
   /**
-   * Deletes the user by id
-   *
-   * @param id
-   */
-
-  public void deleteUser(String id) {
-    userRepository.deleteById(id);
-  }
-
-  /**
    * Method looks up user by email and password
    *
    * @param request

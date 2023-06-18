@@ -33,12 +33,6 @@ public class UserController {
     return ResponseEntity.badRequest().body("Invalid request");
   }
 
-  @DeleteMapping("/{userId}")
-  public ResponseEntity<String> deleteUser(@PathVariable String userId) {
-    userService.deleteUser(userId);
-    return ResponseEntity.ok("User successfully deleted");
-  }
-
   @PostMapping("/login")
   public ResponseEntity<String> userLogin(@Valid @RequestBody UserLoginRequest request) {
     Optional<User> user = userService.getUserByEmailAndPassword(request);
