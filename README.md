@@ -40,10 +40,15 @@ https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/workbench.html
 
 ### Running application locally
 
-Open the code assessment application in IntelliJ IDE.
-Run mvn clean install command.
-Now run the application locally - by default application will run on port 8080.
-Use the below end points in postman to register and login user.
+`*` Open the code assessment application in IntelliJ IDE.
+
+`*` Replace the accesskey and secretkey values with credentials from local instance of dynamo db in application.properties file.
+
+`*` Run mvn clean install command.
+
+`*` Now run the application locally - by default application will run on port 8080.
+
+`*` Use the below end points in postman to register and login user.
 
 ## Rest API Details 
 
