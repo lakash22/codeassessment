@@ -1,13 +1,10 @@
 package com.example.codeassessment.integration.tests;
 
-import com.example.codeassessment.api.entity.User;
 import com.example.codeassessment.api.model.UserLoginRequest;
-import com.example.codeassessment.api.model.UserResponse;
 import com.example.codeassessment.api.repository.UserRepository;
 import com.example.codeassessment.integration.utils.UserLoginHelper;
 import org.junit.*;
 import org.junit.runner.RunWith;
-import org.omg.CORBA.StringHolder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.*;
@@ -16,9 +13,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.Optional;
-
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
