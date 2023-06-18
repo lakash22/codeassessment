@@ -42,7 +42,7 @@ https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/workbench.html
 
 `*` Open the code assessment application in IntelliJ IDE.
 
-`*` Replace the accesskey and secretkey values with credentials from local instance of dynamo db in application.properties file.
+`*` Replace the accesskey and secretkey values with credentials from local instance of DynamoDB in application.properties file.
 
 `*` Run mvn clean install command.
 
@@ -66,7 +66,7 @@ Sample Payload - {
 
 ```
 #### Postman 
-Executing post call using Postman to register new user.
+Execute post call using Postman to register new user.
 
 ![Alt_text](screenshots/UserSuccessfulRegistration.PNG)
 
@@ -92,7 +92,7 @@ Sample Payload - {
 
 ```
 #### Postman 
-Valid login details - Executing post call using Postman to get token for requested user.
+Valid login details - Execute post call using Postman to get token for requested user.
 
 ![Alt text](screenshots/LoginUserTokenReturned.PNG)
 
@@ -152,6 +152,12 @@ Sno. | Test Case  | Status Code | Response |
 2 | User with invalid token should not be able to access their information | 401 | Unauthorized |
 
 ### Test case Run
+
+To run the test please start the application and run below command
+
+```
+mvn integration-test
+```
 
 Below is the screenshot of integration tests run in local. 
 
