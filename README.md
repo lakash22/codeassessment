@@ -153,7 +153,7 @@ Sno. | Test Case  | Status Code | Response |
 
 ### Test case Run
 
-To run the test please start the application and run below command
+To run the integration tests, please start the application and run below command
 
 ```
 mvn integration-test
