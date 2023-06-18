@@ -153,9 +153,10 @@ Sno. | Test Case  | Status Code | Response |
 
 ### Test case Run
 
-To run the integration tests, please start the application and run below command
+To run the integration tests, please start the application using below command and run test
 
 ```
+mvn spring-boot:run
 mvn integration-test
 ```
 
@@ -165,7 +166,7 @@ Below is the screenshot of integration tests run in local.
 
 ### Notes 
 
-`*` I have ignored three tests for password and email validations since my code currently does not handle those scenarios, which could allow bad data to be inserted into the database. Additional test cases can be implemented to sanitize all user inputs, including fields such as first name and last name.
+`*` I have ignored three tests for password and email validations since my development code currently does not handle those scenarios, which could allow bad data to be inserted into the database. Additional, test cases can be implemented to sanitize all user inputs, including fields such as first name and last name.
  
 `*` To enhance security, a mechanism should be implemented that temporarily blocks a user from obtaining a token after a certain number of consecutive invalid password or email attempts. This prevents potential brute force attacks and unauthorized access.
 
