@@ -1,4 +1,4 @@
-# User Registration and Login Application
+# User Registration and Login API
 This application utilizes RESTful API to perform create and read operations, enabling the storage and retrieval of user information in a DynamoDB table. Additionally, it incorporates integration tests that validate the functionality of the REST APIs against DynamoDB, leveraging the capabilities of the Spring Data DynamoDB framework.
 
 ## Getting Started
